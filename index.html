@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damas</title>
+  <!-- Crie um tabuleiro de damas utilizando somente HTML, CSS. Sua estrutura HTML deve conter o tabuleiro, as casas e as peças. Acima do tabuleiro coloque um texto de cabeçalho chamado: "Damas".
+Cria um botão que abrirá uma mensagem de ajuda, essa mensagem deverá ser sobreposta em um estilo "modal". Ela informará as instruções do jogo. Dica: Tente criar primeiramente um elemento na tela e estilize com um classe tornando-o um "modal", depois disso tente atribuir um evento ao clicar o botão de instruções para adicionar uma classe onde ela exibe/oculta a sobreposição modal.
+Adicione um evento ao clicar nas peças do tabuleiro, nessa etapa você vai exibir uma caixa de diálogo de alerta informando em qual peça clicou, se for em uma peça branca exiba a mensagem: cliquei numa peça branca, sendo preta, cliquei numa peça preta. -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300;600&display=swap');
+  </style>
+</head>
+
+<body>
+  <h1>DAMAS</h1>
+  <div class="modal" id="modal_inst"> <button onclick="fecharmodal()" id="fechar"> FECHAR </button><p> O objetivo é capturar ou imobilizar as peças do adversário. <br> O jogador que conseguir capturar todas as peças do inimigo ganha a partida. </p></div>
+  <button onclick="abrirmodal()">VER INSTRUÇÕES</button>
+  <div id=tabuleiro>
+    <div class="linha">
+      <div class="casa"></div>
+      <div class="casa"><div class="peca branca" onclick="Selecionar('branca')"></div></div>
+      <div class="casa"></div>
+      <div class="casa"><div class="peca branca" onclick="Selecionar('branca')"></div></div>
+      <div class="casa"></div>
+      <div class="casa"><div class="peca branca" onclick="Selecionar('branca')"></div></div>
+      <div class="casa"></div>
+      <div class="casa"><div class="peca branca" onclick="Selecionar('branca')"></div></div>
+    </div>
+    <div class="linha">
+      <div class="casa"><div class="peca branca" onclick="Selecionar('branca')"></div></div>
+      <div class="casa"></div>
+      <div class="casa"><div class="peca branca" onclick="Selecionar('branca')"></div></div>
+      <div class="casa"></div>
+      <div class="casa"><div class="peca branca" onclick="Selecionar('branca')"></div></div>
+      <div class="casa"></div>
+      <div class="casa"><div class="peca branca" onclick="Selecionar('branca')"></div></div>
+      <div class="casa"></div>
+    </div>
+    <div class="linha">
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+    </div>
+    <div class="linha">
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+    </div>
+    <div class="linha">
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+    </div>
+    <div class="linha">
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+      <div class="casa"></div>
+    </div>
+    <div class="linha">
+      <div class="casa"></div>
+      <div class="casa"><div class="peca preta" onclick="Selecionar('preta')"></div></div>
+      <div class="casa"></div>
+      <div class="casa"><div class="peca preta" onclick="Selecionar('preta')"></div></div>
+      <div class="casa"></div>
+      <div class="casa"><div class="peca preta" onclick="Selecionar('preta')"></div></div>
+      <div class="casa"></div>
+      <div class="casa"><div class="peca preta" onclick="Selecionar('preta')"></div></div>
+    </div>
+    <div class="linha">
+      <div class="casa"><div class="peca preta" onclick="Selecionar('preta')"></div></div>
+      <div class="casa"></div>
+      <div class="casa"><div class="peca preta" onclick="Selecionar('preta')"></div></div>
+      <div class="casa"></div>
+      <div class="casa"><div class="peca preta" onclick="Selecionar('preta')"></div></div>
+      <div class="casa"></div>
+      <div class="casa"><div class="peca preta" onclick="Selecionar('preta')"></div></div>
+      <div class="casa"></div>
+    </div>
+
+  </div>
+<script>
+  function Selecionar(cor){
+    alert("Cliquei numa peça "+cor)
+  }
+  function abrirmodal(){
+    const modal = document.getElementById("modal_inst")
+    modal.style.display = "block"
+  }
+  function fecharmodal(){
+    const modal = document.getElementById("modal_inst")
+    modal.style.display = "none"
+  }
+  
+</script>
+</body>
+</html>
