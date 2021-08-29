@@ -13,6 +13,10 @@ h1{
   left: calc(50% - 100px);
   border: 1px solid #000;
 }
+.abrirmodal{
+  display: block;
+}
+
 p{
   font-family: 'Josefin Slab', serif;
   font-weight: bold;
