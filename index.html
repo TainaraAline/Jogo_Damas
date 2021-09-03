@@ -18,7 +18,7 @@ Adicione um evento ao clicar nas peças do tabuleiro, nessa etapa você vai exib
   <body>
     <h1>DAMAS</h1>
     <!-- Cria uma classe, que ao clicar no abrir modal, será adicionada ao mesmo, e portanto muda o estilo para parecer que está escondido (fechado). Por default no css = display none. Criar classe para sobrescrever-->
-    <div class="modal" id="modal_inst">
+    <div class="modal" id="modalInstrucoes">
       <button id="fechar">FECHAR</button>
       <p>
         O objetivo é capturar ou imobilizar as peças do adversário. <br />
@@ -26,149 +26,10 @@ Adicione um evento ao clicar nas peças do tabuleiro, nessa etapa você vai exib
         partida.
       </p>
     </div>
+
     <button id="instrucoes">VER INSTRUÇÕES</button>
 
-    <div id="tabuleiro">
-      <div class="linha">
-        <div class="casa"></div>
-        <div class="casa"><div class="peca branca"></div></div>
-        <div class="casa"></div>
-        <div class="casa"><div class="peca branca"></div></div>
-        <div class="casa"></div>
-        <div class="casa"><div class="peca branca"></div></div>
-        <div class="casa"></div>
-        <div class="casa"><div class="peca branca"></div></div>
-      </div>
-      <div class="linha">
-        <div class="casa"><div class="peca branca"></div></div>
-        <div class="casa"></div>
-        <div class="casa"><div class="peca branca"></div></div>
-        <div class="casa"></div>
-        <div class="casa"><div class="peca branca"></div></div>
-        <div class="casa"></div>
-        <div class="casa"><div class="peca branca"></div></div>
-        <div class="casa"></div>
-      </div>
-      <div class="linha">
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-      </div>
-      <div class="linha">
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-      </div>
-      <div class="linha">
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-      </div>
-      <div class="linha">
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-        <div class="casa"></div>
-      </div>
-      <div class="linha">
-        <div class="casa"></div>
-        <div class="casa"><div class="peca preta"></div></div>
-        <div class="casa"></div>
-        <div class="casa"><div class="peca preta"></div></div>
-        <div class="casa"></div>
-        <div class="casa"><div class="peca preta"></div></div>
-        <div class="casa"></div>
-        <div class="casa"><div class="peca preta"></div></div>
-      </div>
-      <div class="linha">
-        <div class="casa"><div class="peca preta"></div></div>
-        <div class="casa"></div>
-        <div class="casa"><div class="peca preta"></div></div>
-        <div class="casa"></div>
-        <div class="casa"><div class="peca preta"></div></div>
-        <div class="casa"></div>
-        <div class="casa"><div class="peca preta"></div></div>
-        <div class="casa"></div>
-      </div>
-    </div>
-
-    <script>
-      // function abrirmodal(){
-      //   const modal = document.getElementById("modal_inst")
-      //   modal.style.display = "block"
-      // }
-      // function fecharmodal(){
-      //   const modal = document.getElementById("modal_inst")
-      //   modal.style.display = "none"
-      // }
-      // function Selecionar(cor){
-      //   alert("Cliquei numa peça "+cor)
-      // }
-
-      // document.getElementById("instrucoes").addEventListener("click", abrirmodal)
-      function abrirmodal() {
-        document.getElementById('modal_inst').classList.add('abrirmodal')
-      }
-      document.getElementById('fechar').addEventListener('click', fecharmodal)
-      function fecharmodal() {
-        document.getElementById('modal_inst').classList.remove('abrirmodal')
-      }
-      // Clique na janela fecha modal, exceto clique dentro do mesmo /// escopo de atuação variavel
-      document.addEventListener('click', fecharmodaljanela)
-      function fecharmodaljanela(evento) {
-        const botaoVerInstrucoes = document.getElementById('instrucoes')
-        const quandoModalNaoEstiverAberto = !document
-          .getElementById('modal_inst')
-          .classList.contains('abrirmodal')
-        const clicouDentroDoModal = document
-          .getElementById('modal_inst')
-          .contains(event.target)
-
-        if (
-          evento.target == botaoVerInstrucoes &&
-          quandoModalNaoEstiverAberto
-        ) {
-          abrirmodal()
-        } else if (
-          !clicouDentroDoModal &&
-          document.getElementById('modal_inst').classList.contains('abrirmodal')
-        ) {
-          fecharmodal()
-        }
-      }
-
-      // Usando event listener target pai / event bubbling
-      document.getElementById('tabuleiro').addEventListener('click', cliquei)
-      function cliquei(evento) {
-        // console.log(evento.target.className != "casa" && evento.target.className != "")
-        // console.log(evento.target.className)
-
-        if (
-          evento.target.className != 'casa' &&
-          evento.target.className != ''
-        ) {
-          alert(`Você clicou numa ${evento.target.className}`)
-        }
-      }
-    </script>
+    <div id="tabuleiro"></div>
   </body>
+  <script type="text/javascript" src="./script.js"></script>
 </html>

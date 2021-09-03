@@ -1,29 +1,29 @@
-h1{
+h1 {
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
 }
-.modal{
+.modal {
   display: none;
   position: fixed;
   z-index: 999;
-  background-color: #EEDBA1;
+  background-color: #eedba1;
   width: 200px;
   height: 200px;
   top: 20px;
   left: calc(50% - 100px);
   border: 1px solid #000;
 }
-.abrirmodal{
+.abrirmodal {
   display: block;
 }
 
-p{
+p {
   font-family: 'Josefin Slab', serif;
   font-weight: bold;
   padding: 10px;
 }
-button{
-  background-color:#A86A24;
+button {
+  background-color: #a86a24;
   color: #030300;
   font-family: 'Josefin Slab', serif;
   font-weight: bold;
@@ -31,24 +31,24 @@ button{
   height: 30px;
 }
 
-button:hover{
+button:hover {
   background-color: #b37e41;
   color: #fff;
 }
 
-#tabuleiro{
+#tabuleiro {
   width: 560px;
   height: 560px;
-  background-color: #EEDBA1;
+  background-color: #eedba1;
   margin: auto;
   display: flex;
   flex-direction: column;
-  border: 30px solid #A86A24;
+  border: 30px solid #a86a24;
 }
-.linha{
+.linha {
   display: flex;
 }
-.casa{
+.casa {
   width: 68px;
   height: 68px;
   border: 1px solid #000;
@@ -57,23 +57,23 @@ button:hover{
   justify-content: center;
 }
 /* Em todas as linhas ímpares, as casas pares devem ser pretas */
-.linha:nth-child(odd) .casa:nth-child(even){
- background-color: black;
+.linha:nth-child(odd) .casa:nth-child(even) {
+  background-color: black;
 }
 /* Em todas as linhas pares, as casas ímpares devem ser pretas */
-.linha:nth-child(even) .casa:nth-child(odd){
+.linha:nth-child(even) .casa:nth-child(odd) {
   background-color: black;
- }
-.peca{
+}
+.peca {
   border-radius: 50%;
   width: 60px;
   height: 60px;
   cursor: pointer;
 }
-.branca{
+.branca {
   background-color: #fff;
 }
-.preta{
+.preta {
   background-color: #000;
   border: 2px solid #fff;
 }
