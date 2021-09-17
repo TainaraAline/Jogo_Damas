@@ -49,6 +49,27 @@ for (let linha = 0; linha < 8; linha++) {
     let divCasa = document.createElement('div')
     divCasa.classList.add('casa')
 
+    if (linha % 2 === 0 && casa % 2 > 0 && (linha <= 2 || linha >= 5)) {
+      let divPeca = document.createElement('div')
+      divPeca.classList.add('peca')
+      if (linha <= 2) {
+        divPeca.classList.add('branca')
+      } else {
+        divPeca.classList.add('preta')
+      }
+      divCasa.appendChild(divPeca)
+    }
+    if (linha % 2 > 0 && casa % 2 === 0 && (linha <= 2 || linha >= 5)) {
+      let divPeca = document.createElement('div')
+      divPeca.classList.add('peca')
+      if (linha <= 2) {
+        divPeca.classList.add('branca')
+      } else {
+        divPeca.classList.add('preta')
+      }
+      divCasa.appendChild(divPeca)
+    }
+
     divLinha.appendChild(divCasa)
   }
 

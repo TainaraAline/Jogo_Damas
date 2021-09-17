@@ -1,0 +1,86 @@
+h1 {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  background-color: #eedba1;
+  width: 200px;
+  height: 200px;
+  top: 20px;
+  left: calc(50% - 100px);
+  border: 1px solid #000;
+}
+
+.abrirmodal {
+  display: block;
+}
+
+p {
+  font-family: "Josefin Slab", serif;
+  font-weight: bold;
+  padding: 10px;
+}
+
+button {
+  background-color: #a86a24;
+  color: #030300;
+  font-family: "Josefin Slab", serif;
+  font-weight: bold;
+  cursor: pointer;
+  height: 30px;
+}
+button:hover {
+  background-color: #b37e41;
+  color: #fff;
+}
+
+#tabuleiro {
+  width: 560px;
+  height: 560px;
+  background-color: #eedba1;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border: 30px solid #a86a24;
+}
+
+.linha {
+  display: flex;
+}
+.linha:nth-child(odd) .casa:nth-child(even) {
+  background-color: black;
+}
+.linha:nth-child(even) .casa:nth-child(odd) {
+  background-color: black;
+}
+
+.casa {
+  width: 68px;
+  height: 68px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.peca {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.branca {
+  background-color: #fff;
+}
+
+.preta {
+  background-color: #000;
+  border: 2px solid #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

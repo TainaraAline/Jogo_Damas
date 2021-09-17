@@ -29,11 +29,10 @@ button {
   font-weight: bold;
   cursor: pointer;
   height: 30px;
-}
-
-button:hover {
-  background-color: #b37e41;
-  color: #fff;
+  &:hover {
+    background-color: #b37e41;
+    color: #fff;
+  }
 }
 
 #tabuleiro {
@@ -47,6 +46,12 @@ button:hover {
 }
 .linha {
   display: flex;
+  &:nth-child(odd) .casa:nth-child(even) {
+    background-color: black;
+  }
+  &:nth-child(even) .casa:nth-child(odd) {
+    background-color: black;
+  }
 }
 .casa {
   width: 68px;
@@ -56,14 +61,7 @@ button:hover {
   align-items: center;
   justify-content: center;
 }
-/* Em todas as linhas ímpares, as casas pares devem ser pretas */
-.linha:nth-child(odd) .casa:nth-child(even) {
-  background-color: black;
-}
-/* Em todas as linhas pares, as casas ímpares devem ser pretas */
-.linha:nth-child(even) .casa:nth-child(odd) {
-  background-color: black;
-}
+
 .peca {
   border-radius: 50%;
   width: 60px;

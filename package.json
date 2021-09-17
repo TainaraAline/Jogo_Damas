@@ -1,0 +1,16 @@
+{
+  "name": "Jogo_Damas-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/TainaraAline/Jogo_Damas.git",
+  "author": "Tainara Aline <tainara.asb@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "sass": "npx sass src/style.scss src/style.css",
+    "dev": "yarn sass && npx parcel src/index.html"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.41.1"
+  }
+}
